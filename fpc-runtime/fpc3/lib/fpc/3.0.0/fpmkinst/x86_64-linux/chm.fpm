@@ -1,0 +1,9 @@
+Name=chm
+Version=3.0.0
+Checksum=1448034594
+CPU=x86_64
+OS=linux
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Cg -o -dx86_64 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,fcl-xml|1448034593,fcl-base|1448034591
+NeedLibC=N
+FPMakeAddIn=N

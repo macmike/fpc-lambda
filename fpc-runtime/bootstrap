@@ -1,0 +1,28 @@
+#!/bin/sh
+set -euo pipefail
+
+PATH="/opt/fpc3/bin:${PATH}"
+export PATH
+
+PPC_CONFIG_PATH="/opt/"
+export PPC_CONFIG_PATH
+#env
+
+
+# Processing
+while true
+do
+  HEADERS="$(mktemp)"
+  # Get an event
+  EVENT_DATA=$(curl -sS -LD "$HEADERS" -X GET "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/next")
+  REQUEST_ID=$(grep -Fi Lambda-Runtime-Aws-Request-Id "$HEADERS" | tr -d '[:space:]' | cut -d: -f2)
+
+  #RESPONSE=$(./function 'EVENT_DATA')  
+
+  RESPONSE=$(instantfpc --set-cache=/tmp/ ./function.pas "$EVENT_DATA")
+
+  echo "fpc response: $RESPONSE"
+  
+  # Send the response
+  curl -s -X POST "http://${AWS_LAMBDA_RUNTIME_API}/2018-06-01/runtime/invocation/$REQUEST_ID/response"  -d "$RESPONSE"
+done

@@ -1,0 +1,9 @@
+Name=sdl
+Version=3.0.0
+Checksum=1448034611
+CPU=x86_64
+OS=linux
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Cg -o -dx86_64 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,x11|1448034589,pthreads|1448034609
+NeedLibC=N
+FPMakeAddIn=N

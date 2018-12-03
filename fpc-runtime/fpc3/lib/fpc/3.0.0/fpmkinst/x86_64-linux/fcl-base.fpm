@@ -1,0 +1,9 @@
+Name=fcl-base
+Version=3.0.0
+Checksum=1448034591
+CPU=x86_64
+OS=linux
+FPMakeOptions=-o -Ur -o -Xs -o -O2 -o -n -o -Cg -o -dx86_64 -o -dRELEASE -o -XX -o -CX
+Depends=rtl,fcl-res|1448034590,rtl-objpas|1448034590
+NeedLibC=N
+FPMakeAddIn=N
