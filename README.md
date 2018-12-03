@@ -36,4 +36,4 @@ The example above, including build and run scripts
 A more detailed detailed function that parses payload JSON and responds with custom JSON.
 
 ## [fpc-runtime](/fpc-runtime)
-The code, configuration, files and build scripts for creating the runtime. Note that I've simply put a chunk of units in the **fpc-runtime/fpc3/lib/fpc/3.0.0/units/x86_64-linux** [folder](tree/master/fpc-runtime/fpc3/lib/fpc/3.0.0/units/x86_64-linux), which is a mix of the traditional FPC lib units and fpc-src packages (required to work with JSON). I've left a lot of bloat in here, and the **fpc-runtime/fpc3/bin** folder which could be removed to streamline fpc-lambda.
+The code, configuration, files and build scripts for creating the runtime. Note that I've simply put a chunk of units in the **fpc-runtime/fpc3/lib/fpc/3.0.0/units/x86_64-linux** [folder](/fpc-runtime/fpc3/lib/fpc/3.0.0/units/x86_64-linux), which is a mix of the traditional FPC lib units and fpc-src packages (required to work with JSON). I've left a lot of bloat in here, and the **fpc-runtime/fpc3/bin** folder which could be removed to streamline fpc-lambda.
