@@ -2,7 +2,7 @@
 
 At [AWS Reinvent 2018](https://reinvent.awsevents.com/), Werner Vogels said it was now possible to use any language in AWS Lambda. I thought I’d put that to the test!
 
-I thought it’d be interesting to add lambda support for Pascal, specifically the FreePascal variant found with Lazarus (the free, cross-platform version of Delphi). Mainly because it doesn’t really fit, it’s a compiled language, but I do have a remaining soft spot for the Lazarus project so I thought I’d give it a go.
+I thought it’d be interesting to add lambda support for Pascal, specifically the FreePascal 3.0.0 variant found with Lazarus (the free, cross-platform version of Delphi). Mainly because it doesn’t really fit, it’s a compiled language, but I do have a remaining soft spot for the Lazarus project so I thought I’d give it a go.
 
 **Fair warning,** this doesn’t make ton’s of sense. As a compiled language, you can’t initialise things in the runtime and then call them from multiple instances of functions, it also doesn’t deliver an amazing cold-start experience since it needs compiling on each run.
 
@@ -26,8 +26,10 @@ Finally, invoke the function like this:
 
 Or from the AWS console:
 
+![AWS Console](https://mikemacd.files.wordpress.com/2018/12/selection_023.png?w=590 "AWS Console")
 
-For more detail [see my blog](https://mikemacd.wordpress.com).
+
+For more detail [see my blog](https://mikemacd.wordpress.com/2018/12/03/building-a-custom-lambda-runtime-for-anything-even-pascal-yes-lambda-reinvent-aws/).
 
 ## [fpc-hello](/fpc-hello)
 The example above, including build and run scripts
